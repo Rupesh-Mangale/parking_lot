@@ -39,7 +39,7 @@ else {
  * @description called when users want to interact via console
  * it process one command at a time
  */
-processComandLineInput = () => {
+function processComandLineInput() {
     var prompts = readLine.createInterface({
         input: process.stdin,
         output: process.stdout,
@@ -98,7 +98,9 @@ processUserCommands = (input) => {
                 if (hoursParked > 2) {
                     TotalParkeingCharges = (hoursParked - 2) * EXTRA_PARKINIG_CHARGES + MIN_PARKINIG_CHARGES
                 }
-                console.log(chalk.blue('Registration number ' + carNumber + ' with Slot Number ' + parkingSlotNumber + ' is free with Charge ' + TotalParkeingCharges));
+                if (parkingSlotNumber != undefined) {
+                    console.log(chalk.blue('Registration number ' + carNumber + ' with Slot Number ' + parkingSlotNumber + ' is free with Charge ' + TotalParkeingCharges));
+                }
             }
             catch (err) {
                 console.log(chalk.red(err.message)); // handling exceptions

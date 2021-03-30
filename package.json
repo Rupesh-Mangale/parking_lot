@@ -4,7 +4,11 @@
   "description": "Automated Parking lot project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "test": "nyc --reporter=html --reporter=text node scripts/test.js",
+    "test-unit": "mocha tests/specs.js",
+    "test-lint": "node scripts/test-lint.js",
+    "file-mode": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/Rupesh-Mangale/parking_lot/issues"
   },
-  "homepage": "https://github.com/Rupesh-Mangale/parking_lot#readme"
+  "homepage": "https://github.com/Rupesh-Mangale/parking_lot#readme",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2"
+  }
 }

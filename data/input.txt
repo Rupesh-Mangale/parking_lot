@@ -8,10 +8,11 @@ park KA-01-HH-3141 Black
 leave KA-01-HH-3141 4
 status
 park KA-01-P-333 White
-status
 park DL-12-AA-9999 White
+status
 leave KA-01-HH-1234 4
 leave KA-01-BB-0001 6
+status
 leave DL-12-AA-9999 2   
 park KA-09-HH-0987 White
 park CA-09-IO-1111 White

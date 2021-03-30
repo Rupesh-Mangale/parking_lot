@@ -98,7 +98,7 @@ class ParkingLot {
 		if (this.MAX_PARKING_SLOTS > 0) {
 			var carNumber = input.split(' ')[1];
 		    for (var index = 0; index < this.MAX_PARKING_SLOTS; index++) {
-				if (this.parkingSlots[index].NUMBER === carNumber) {
+				if (this.parkingSlots[index]!=null && (this.parkingSlots[index].NUMBER === carNumber)) {
 					this.parkingSlots[index] = null;
 					return index + 1;
 				}
@@ -115,13 +115,13 @@ class ParkingLot {
     getParkingStatus () {
     	var arr = new Array();
     	if (this.MAX_PARKING_SLOTS > 0) {
-			arr.push('Slot No. Registration No. Color ');
+			arr.push('Slot No. Registration No. ');
 
 			// use binary search here
         	for (var i = 0; i < this.parkingSlots.length; i++) {
         		if (this.parkingSlots[i] != null) {
         			var e = i + 1;
-        			arr.push(e + '.  ' + this.parkingSlots[i].NUMBER + '  ' + this.parkingSlots[i].COLOR);
+        			arr.push(e + '.  ' + this.parkingSlots[i].NUMBER );
         		}
         	}
         	return arr;
