@@ -18,6 +18,10 @@ For File Mode
 Open terminal and type node src/index.js data/input.txt.
 
 node src/index.js <path_to_file.txt>
+
+example = node src/index.js data/file_inputs.txt
+
+
 Note: You can find a few sample input files inside data/ folder.
 
 Explained
